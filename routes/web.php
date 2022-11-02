@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::get('view',[BoilerController::class, 'index'])->name('view');
 Route::post('/add_boiler',[BoilerController::class, 'create'])->name('boiler.add');
+// 
