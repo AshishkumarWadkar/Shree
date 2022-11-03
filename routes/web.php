@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BoilerController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,5 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('view',[BoilerController::class, 'index'])->name('view');
-Route::post('/add_boiler',[BoilerController::class, 'create'])->name('boiler.add');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
+
+
+
+});
