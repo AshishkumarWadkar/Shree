@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Boiler extends Model
 {
     use HasFactory;
-    protected $table = "bolier";
+    protected $table ="boiler";
 }
