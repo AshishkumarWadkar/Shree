@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BoilerController;
+use App\Http\Controllers\MemoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,6 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
 
 
 });
+
+Route::resource('boiler', BoilerController::class);
+Route::resource('memo', MemoController::class);
