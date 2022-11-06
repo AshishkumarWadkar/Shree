@@ -284,11 +284,11 @@
                             <!-- <li><a href="./index-2.html">Home 2</a></li> -->
                         </ul>
                     </li>
-                    {{-- <li>
-                        <a href="{{route('boiler')}}" aria-expanded="false">
+                    <li>
+                        <a href="{{route('boiler.index')}}" aria-expanded="false">
                             <i class="icon-badge menu-icon"></i><span class="nav-text">Boiler</span>
                         </a>
-                    </li> --}}
+                    </li>
                     {{-- <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>
@@ -400,8 +400,7 @@
                             <i class="icon-menu menu-icon"></i><span class="nav-text">Table</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./table-basic.html" aria-expanded="false">Basic Table</a></li>
-                            <li><a href="./table-datatable.html" aria-expanded="false">Data Table</a></li>
+                           <li><a href="{{route('boiler.index')}}" aria-expanded="false">Data Table</a></li>
                         </ul>
                     </li> --}}
                     {{-- <li class="nav-label">Pages</li> --}}

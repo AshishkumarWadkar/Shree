@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Boiler;
+use App\Models\OriginMaster;
+
 
 class BoilerController extends Controller
 {
@@ -16,7 +18,10 @@ class BoilerController extends Controller
     {
         //
 
-        return Boiler::all();
+        $boiler = Boiler::all();
+        $origin = OriginMaster::all();
+       
+        return view("boiler",compact('boiler','origin'));
     }
 
     /**
@@ -26,7 +31,7 @@ class BoilerController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -37,7 +42,17 @@ class BoilerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $boiler             = new Boiler;
+        $boiler->date       = $request->date;
+        $boiler->boiler     = $request->boiler;
+        $boiler->origin     = $request->origin;
+        $boiler->ready      = $request->ready;
+        $boiler->reject     = $request->rejected;
+        $boiler->uncut      = $request->uncut;
+        $boiler->remain     = $request->remain;
+        $boiler->save();
+
+        return redirect()->route('boiler.index');
     }
 
     /**
@@ -59,7 +74,10 @@ class BoilerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $boiler     = Boiler::find($id);
+        $origin     = OriginMaster::all();
+
+        return view("boiler_edit",compact('boiler','origin'));
     }
 
     /**
@@ -71,7 +89,18 @@ class BoilerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "hii";
+        $boiler             = Boiler::find($id) ; 
+        $boiler->date       = $request->date;
+        $boiler->boiler     = $request->boiler;
+        $boiler->origin     = $request->origin;
+        $boiler->ready      = $request->ready;
+        $boiler->reject     = $request->rejected;
+        $boiler->uncut      = $request->uncut;
+        $boiler->remain     = $request->remain;
+        $boiler->save();
+
+        return redirect()->route('boiler.index');
     }
 
     /**
@@ -82,6 +111,8 @@ class BoilerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $boiler    = Boiler::find($id); 
+        $boiler->delete();
+        
     }
 }

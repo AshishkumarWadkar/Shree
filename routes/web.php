@@ -31,3 +31,6 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
 
 Route::resource('boiler', BoilerController::class);
 Route::resource('memo', MemoController::class);
+
+
+

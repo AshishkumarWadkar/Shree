@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Company Bootstrap Template - Index</title>
+  <title>Shree Cashew Nuts</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,7 +51,7 @@
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
 
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+          {{-- <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="about.html">About Us</a></li>
               <li><a href="team.html">Team</a></li>
@@ -66,13 +66,15 @@
                 </ul>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
-          <li><a href="services.html">Services</a></li>
+          <li><a href="{{route('login')}}">Log In</a></li>
+
+          {{-- <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li> --}}
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -98,8 +100,8 @@
         <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-              <h2>Welcome to <span>Company</span></h2>
-              <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h2>Welcome to <span>Shree Cashew</span></h2>
+              <p>The cashew tree (Anacardium occidentale) is a tropical evergreen tree in the genus Anacardium that produces the cashew seed and the cashew apple accessory fruit. The tree can grow as tall as 14 metres (46 feet),</p>
               <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
             </div>
           </div>
